@@ -1,17 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 * {
   margin: 0;
-  /* padding: 0;
-  box-sizing: border-box; */
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   height: 100vh;
 }
 
-/* a {
+a {
   text-decoration: none;
   color: #000;
 }
@@ -41,63 +41,18 @@ h3 {
   margin: 0 auto;
   padding: 0 20px;
   text-align: center;
-} */
+}
 
-/* .header {
+.header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  height: 3.5rem;
-  padding: 12px 4px 4px 16px;
-  background-color: white;
-  color: black;
+  padding: 20px 0;
+  border-bottom: 1px solid #e6e6e6;
+  margin-bottom: 60px;
 }
 
-.logo {
-  color: #e60023;
-  font-size: 2rem;
-  cursor: pointer;
-  padding: 4px 4px;
-  border-radius: 1.5rem;
-}
-.logo:hover {
-  background-color: #efefef;
-}
-
-.homebutton {
-  display: flex;
-  height: 48px;
-  min-width: 123px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 24px;
-  cursor: pointer;
-}
-.homepagebutton {
-  background-color: rgb(17, 17, 17);
-}
-.homepagebutton a {
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-}
-.todaybutton {
-  background-color: #fff;
-}
-.todaybutton a {
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
-}
-.createbutton {
-  background-color: #fff;
-}
-.createbutton a {
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
-} */
-
-/* .header ul {
+.header ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -129,7 +84,29 @@ h3 {
 
 .heading p {
   color: #828282;
-} */
+}
+
+.goals {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.goal {
+  background-color: #f4f4f4;
+  margin: 10px 0;
+  padding: 20px 0 10px;
+  position: relative;
+}
+
+.goal .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
 
 .form,
 .content {

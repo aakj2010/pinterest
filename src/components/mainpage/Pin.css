@@ -1,0 +1,20 @@
+.container {
+  display: inline-flex;
+  padding: 0.5rem;
+}
+.item {
+  display: flex;
+  align-items: flex-start;
+  box-sizing: border-box;
+  cursor: pointer;
+  width: 15rem;
+  padding: 0.5rem;
+}
+img{
+    padding: 0.3rem;
+    display: flex;
+    width: 100%;
+    cursor: zoom-in;
+    border-radius: 1rem;
+    object-fit: cover;
+}
