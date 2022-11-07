@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react'
 import './Login.css'
-import { FaSignInAlt } from 'react-icons/fa'
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { login, reset } from '../features/auth/authSlice'
 import Spinner from '../components/Spinner'
-import HomePageHeader from '../components/HomePageHeader'
+import PinterestIcon from '@mui/icons-material/Pinterest';
+import { IconButton } from '@mui/material';
 
 
 function Login() {
@@ -55,23 +55,22 @@ function Login() {
         dispatch(login(userData))
     }
 
-if(isLoading){
-    return <Spinner />
-}
+    if (isLoading) {
+        return <Spinner />
+    }
 
     return (
         <>
-        <HomePageHeader />
-
-            <section className='heading' >
-                <h1>
-                    <FaSignInAlt /> Login
-                </h1>
-                {/* <p>Login</p> */}
-            </section>
             <section className='form'>
+                <div className='pinterest'>
+                    <IconButton>
+                        <PinterestIcon />
+                    </IconButton>
+                </div>
+                <h2 className='heading'>Welcome to Pinterest</h2>
                 <form onSubmit={onSubmit}>
                     <div className="form-group">
+                        <label>Email address</label>
                         <input
                             type="email"
                             className="form-control"
@@ -82,6 +81,7 @@ if(isLoading){
                             onChange={onChange} />
                     </div>
                     <div className="form-group">
+                        <label>Password</label>
                         <input
                             type="password"
                             className="form-control"
@@ -91,11 +91,13 @@ if(isLoading){
                             placeholder='Enter your password'
                             onChange={onChange} />
                     </div>
-
                     <div className="form-group">
-                        <button type='submit' className='btn btn-block'>Submit</button>
+                        <button type='submit' className='btn btn-red'>Login</button>
                     </div>
-
+                    <span>Or</span>
+                    <div>
+                        <button type='submit' className="btn btn-block">Continue with Google</button>
+                    </div>
                 </form>
             </section>
 

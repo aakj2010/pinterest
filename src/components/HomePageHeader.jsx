@@ -24,8 +24,8 @@ function HomePageHeader() {
                         <li>
                             Press
                         </li>
-                        <li id='login'>
-                            <Link to= '/login' id='login'>Log in</Link>
+                        <li>
+                            <a href="" className='login'><Link to='/login' id='login'>Log in</Link></a>   
                         </li>
                         <li id='signup'>
                             <Link to='/register' id='signup'>Sign up</Link>
@@ -33,11 +33,6 @@ function HomePageHeader() {
                     </ul>
                 </div>
             </header>
-            {/* <Login /> */}
-            {/* <body className='body'>
-                <br /><br /><br /><br /><br /><br />
-                <h1>Get your next</h1>
-            </body> */}
         </>
     )
 }

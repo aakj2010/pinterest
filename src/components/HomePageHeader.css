@@ -40,7 +40,7 @@ ul {
   }
   
   li {
-    padding-left: 16px;
+    padding-left: 8px;
     padding-right: 8px;
     display: inline;
   }
@@ -54,12 +54,12 @@ ul {
     border: none;
     font-size: 1rem;
     font-weight: 600;
-    background-color: #e60023;
-    color: white;
+    background-color: #e60023 !important;
+    color: #fff !important;
     text-decoration: none;
   }
   #login > button:hover{
-    background-color: #ad081b;
+    background-color: #ad081b !important;
   }
   #signup > button{
     margin: 8px 0;
@@ -68,12 +68,12 @@ ul {
     border: none;
     font-size: 1rem;
     font-weight: 600;
-    background-color: #efefef;
-    color: black;
+    background-color: #efefef !important;
+    color: black !important;
     text-decoration: none;
   }
   #signup > button:hover{
-    background-color: #E2E2E2;
+    background-color: #767676 !important;
   }
   .body{
     margin: 0;
@@ -90,4 +90,20 @@ ul {
     font-weight: 400;
     font-family: 'Poppins';
   }
-  
+  a{
+    margin: 4px;
+    padding: 5px 4px;
+    border-radius: 24px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    /* color: #000 !important; */
+    /* background-color: #e60023; */
+  }
+  /* a:hover{
+    background-color: #ad081b;
+    text-decoration: none !important;
+    color: #fff;
+    border: 1px solid #000;
+  } */

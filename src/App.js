@@ -6,14 +6,17 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomePageHeader from './components/HomePageHeader';
 import MainBoard from './components/mainpage/MainBoard';
 import MainPageHeader from './components/mainpage/MainPageHeader';
-import unsplash from './api/unsplash'
+import unsplash from './features/unsplash/unsplash'
 import Portal from './components/portal/Portal';
 import Register from './pages/Register';
 import Login from './pages/Login';
+import { useSelector } from 'react-redux'
 
 
 function App() {
   const [pins, setNewPins] = useState([])
+
+  const { user } = useSelector((state) => state.auth)
 
   const getImages = (term) => {
     return unsplash.get("https://api.unsplash.com/search/photos", {
@@ -48,6 +51,7 @@ function App() {
     })
   }
 
+
   useEffect(() => {
 
     getNewPins()
@@ -76,6 +80,10 @@ function App() {
 
   return (
     <BrowserRouter>
+      {
+        !user ? <HomePageHeader /> : null
+      }
+
       <Routes>
 
         <Route path='/login' element={<Login />} />
@@ -84,6 +92,11 @@ function App() {
         <Route path='/mainpageheader' element={<MainPageHeader onSubmit={onSearchSubmit} />} />
         <Route path='/' element={<MainBoard pins={pins} />} />
 
+
+        {/* <Route path='/portal' element={<Portal />}>
+          <Route path='mainpageheader' element={<MainPageHeader onSubmit={onSearchSubmit} />} />
+          <Route path='/' element={<MainBoard pins={pins} />} />
+        </Route> */}
 
       </Routes>
     </BrowserRouter >

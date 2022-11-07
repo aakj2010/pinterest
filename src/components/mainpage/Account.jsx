@@ -8,14 +8,16 @@ import { useSelector } from 'react-redux'
 function Account() {
 
   const { user } = useSelector((state) => state.auth)
-  // const navigate = useNavigate()
 
   return (
     <>
-      <IconButton>
-        <button to='/account' className='avatarlink'><InitialsAvatar name={user ? (user.name) : ("")} /></button>
-        <span className='avatarhide'>Your profile</span>
-      </IconButton>
+      <div className="header__container">
+      <div className="avatar__wrapper">
+        <div className="avatar">{user.name.charAt(0).toUpperCase()}</div>
+      </div>
+      <h1>{user.name}</h1>
+      <span className="username">@{user.username}</span>
+    </div>
     </>
   )
 }

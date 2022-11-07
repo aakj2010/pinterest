@@ -24,6 +24,13 @@ const login = async (userData) => {
     return response.data
 }
 
+// getProfile
+const getProfile = async (userData) => {
+    const response = await axios.get((API_URL + 'userId', userData))
+    
+    return response.data
+  };
+
 
 // Logout User
 const logout = ()=>{
@@ -34,6 +41,7 @@ const authService = {
     register,
     logout,
     login,
+    getProfile,
 }
 
 export default authService

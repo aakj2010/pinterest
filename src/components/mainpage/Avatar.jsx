@@ -1,7 +1,7 @@
 import React from 'react'
 import './MainPageHeader.css'
 import InitialsAvatar from 'react-initials-avatar';
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { logout, reset } from '../../features/auth/authSlice'
 
@@ -20,22 +20,18 @@ function Avatar() {
     return (
         <div>
             <div className='menu_1'>
-                <div className='account' style={{ textAlign: "left", padding: "4px" }}>Currently in <br />
-                    <div style={{ textAlign: "left", padding: "4px", display: "flex" }}>
+                <div className='' style={{ textAlign: "left", padding: "4px" }}>Currently in <br />
+                    <div className='account' style={{ textAlign: "left", padding: "4px", display: "flex" }}>
 
                         <br /><br />
                         <div className="initial-avatar" style={{ padding: "2px", color: "#000000" }} >
-                            {/* <!-- Avatar image --> */}
-
-                            <InitialsAvatar name={user.name} />
+                            <span className='initial'><InitialsAvatar name={user.name} /></span>
                         </div>
                         <div style={{ textAlign: "left", padding: "4px" }}>
-                            <span style={{ color: "#000000", fontsize: "32px", fontweight: "600" }}>{user.name}</span>
+                            <span className='username'>{user.name}</span>
                             <span><br />Personel</span>
                             <span><br />{user.email}</span>
                         </div>
-
-
                     </div>
                 </div>
                 <div style={{ textAlign: "left", padding: "4px" }}>Your Accounts
@@ -47,7 +43,7 @@ function Avatar() {
                     </li>
                 </div>
 
-                <div style={{ textAlign: "left", fontsize: "20px", padding: "4px" }}>More Options
+                <div style={{ textAlign: "left", padding: "4px" }}>More Options
                     <li className='menu_item_1' style={{ color: "#000000", fontweight: "bold" }}>
                         <a href='' >Settings</a>
                     </li>
@@ -66,10 +62,10 @@ function Avatar() {
                     <li className='menu_item_1' style={{ color: "#000000", fontweight: "bold" }}>
                         <a href="#">See term and privacy </a>
                     </li>
-                    <li className='menu_item_1' >
-                        <button href="#" 
-                        onClick={onLogout} 
-                        style={{ color: "#ffffff", fontweight: "bold", backgroundColor:"#000000" }}>Logout</button>
+                    <li className='' >
+                        <button className='logout'
+                            onClick={onLogout}
+                            style={{width:"14rem"}}>Log out</button>
                     </li>
                 </div>
             </div>

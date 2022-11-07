@@ -3,10 +3,9 @@ import './Login.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
-import { FaUser } from 'react-icons/fa'
+import PinterestIcon from '@mui/icons-material/Pinterest';
 import { register, reset } from '../features/auth/authSlice'
 import Spinner from '../components/Spinner'
-import HomePageHeader from '../components/HomePageHeader'
 
 
 function Register() {
@@ -60,23 +59,21 @@ function Register() {
         }
     }
 
-    if(isLoading){
+    if (isLoading) {
         return <Spinner />
     }
 
 
     return (
         <>
-          <HomePageHeader />
-            <section className='heading' >
-                <h1>
-                    <FaUser /> Register
-                </h1>
-                <p>Please Create an Account</p>
-            </section>
             <section className='form'>
-                <form onSubmit={onSubmit} >
+                <div className='logo'>
+                    <PinterestIcon />
+                </div>
+                <h2 className='heading'>Welcome to Pinterest</h2>
+                <form onSubmit={onSubmit}>
                     <div className="form-group">
+                        <label>Enter your name</label>
                         <input
                             type="text"
                             className="form-control"
@@ -84,10 +81,11 @@ function Register() {
                             name='name'
                             value={name}
                             placeholder='Enter your name'
-                            onChange={onChange} 
-                            />
+                            onChange={onChange}
+                        />
                     </div>
                     <div className="form-group">
+                        <label>Email address</label>
                         <input
                             type="email"
                             className="form-control"
@@ -95,10 +93,10 @@ function Register() {
                             name='email'
                             value={email}
                             placeholder='Enter your email'
-                            onChange={onChange} 
-                            />
+                            onChange={onChange} />
                     </div>
                     <div className="form-group">
+                        <label>Password</label>
                         <input
                             type="password"
                             className="form-control"
@@ -106,10 +104,10 @@ function Register() {
                             name='password'
                             value={password}
                             placeholder='Enter your password'
-                            onChange={onChange}
-                             />
+                            onChange={onChange} />
                     </div>
                     <div className="form-group">
+                        <label>Confirm password</label>
                         <input
                             type="password"
                             className="form-control"
@@ -117,14 +115,16 @@ function Register() {
                             name='password2'
                             value={password2}
                             placeholder='Confirm password'
-                            onChange={onChange} 
-                            />
+                            onChange={onChange}
+                        />
                     </div>
-
                     <div className="form-group">
-                        <button type='submit' className='btn btn-block'>Submit</button>
+                        <button type='submit' className='btn btn-red'>Login</button>
                     </div>
-
+                    <span>Or</span>
+                    <div>
+                        <button type='submit' className="btn btn-block">Continue with Google</button>
+                    </div>
                 </form>
             </section>
 
