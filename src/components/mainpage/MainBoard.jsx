@@ -7,15 +7,6 @@ import { useSelector } from 'react-redux'
 // import Masonry from "react-masonry-css";
 import styled from 'styled-components'
 
-// function MainBoard({userId, photoUrls, savedPins}) {
-
-// const breakpoints = { default: 4 };
-// const baseWidth = 503;
-// const increment = 252;
-// for (let i = 0; i < 30; i++) {
-//   breakpoints[baseWidth + increment * i] = i + 1;
-// }
-
 
 function MainBoard(props) {
 

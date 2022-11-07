@@ -6,6 +6,7 @@ import { toast } from 'react-toastify'
 import PinterestIcon from '@mui/icons-material/Pinterest';
 import { register, reset } from '../features/auth/authSlice'
 import Spinner from '../components/Spinner'
+import { IconButton } from '@mui/material';
 
 
 function Register() {
@@ -67,8 +68,10 @@ function Register() {
     return (
         <>
             <section className='form'>
-                <div className='logo'>
-                    <PinterestIcon />
+                <div className='pinterest'>
+                    <IconButton>
+                        <PinterestIcon />
+                    </IconButton>
                 </div>
                 <h2 className='heading'>Welcome to Pinterest</h2>
                 <form onSubmit={onSubmit}>
