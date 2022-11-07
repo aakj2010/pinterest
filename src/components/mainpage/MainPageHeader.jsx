@@ -58,13 +58,13 @@ function MainPageHeader(props) {
                     </IconButton>
                 </LogoWrapper>
                 <div className='homebutton'>
-                    <div className='homepagebutton homebutton'>
+                    <HomePageButton className='homepagebutton homebutton'>
                         <a href="">Home</a>
-                    </div>
-                    <div className='todaybutton homebutton'>
+                    </HomePageButton>
+                    <TodayButton className='todaybutton homebutton'>
                         <a href="">Today</a>
-                    </div>
-                    <div className='createbutton homebutton dropdown'>
+                    </TodayButton>
+                    <CreateButton className='createbutton homebutton dropdown'>
                         <button href='' onClick={handleCreate} className='dropbtn'>Create
                             <KeyboardArrowDownIcon />
                             {
@@ -80,19 +80,19 @@ function MainPageHeader(props) {
                                 ) : null
                             }
                         </button>
-                    </div>
+                    </CreateButton>
                 </div>
-                <SearchBarWrapper className='searchbar searchbarwrapper'>
-                    <div className='searchlogo'>
+                <SearchWrapper className='searchbar searchbarwrapper'>
+                    <SearchBarWrapper className='searchlogo'>
                         <IconButton>
                             <SearchIcon />
                         </IconButton>
-                    </div>
-                    <form>
-                        <input type="text" onChange={(e) => setInput(e.target.value)} />
-                        <button type="submit" onClick={onSearchSubmit}></button>
-                    </form>
-                </SearchBarWrapper>
+                        <form>
+                            <input type="text" onChange={(e) => setInput(e.target.value)} />
+                            <button type="submit" onClick={onSearchSubmit}></button>
+                        </form>
+                    </SearchBarWrapper>
+                </SearchWrapper>
                 <IconsWrapper className='iconswrapper'>
                     <IconButton>
                         <button className='notificationlink'><NotificationsIcon /></button>
