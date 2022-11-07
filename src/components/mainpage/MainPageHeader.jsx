@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-// import './MainPageHeader.css'
+import './MainPageHeader.css'
 import PinterestIcon from '@mui/icons-material/Pinterest';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import SearchIcon from '@mui/icons-material/Search';
@@ -109,7 +109,6 @@ function MainPageHeader(props) {
                             <button className='avatarlink'><InitialsAvatar name={user ? user.name : ""} /></button>
                             <span className='avatarhide'>Your profile</span>
                         </Link>
-
                     </IconButton>
                     <IconButton>
                         <button onClick={handleAvatar} className='accountlink' style={{ background: "none", border: "none", color: "#767676" }}>

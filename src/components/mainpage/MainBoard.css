@@ -55,6 +55,6 @@
 @media (min-width:1512px) and (max-width:1763px){
     .mainboard_container{
         max-width: 1512px;
-        column-count: 6;
+        column-count: 5;
     }
 }
