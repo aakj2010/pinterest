@@ -26,7 +26,7 @@ function MainPageHeader(props) {
 
     const { user } = useSelector((state) => state.auth)
 
-    const [input, setInput] = useState("");
+    const [inputs, setInput] = useState("");
     const [create, setCreate] = useState(false)
     const [avatar, setAvatar] = useState(false)
 
@@ -37,12 +37,14 @@ function MainPageHeader(props) {
     const handleAvatar = () => {
         setAvatar(!avatar);
     }
-
+    console.log(inputs);
     const onSearchSubmit = (e) => {
         e.preventDefault();
-        props.onSubmit(input)
-        console.log("this is the input", input)
+        console.log("this is the input", inputs)
+        props.onSubmit(inputs)
+       
     }
+
     useEffect(() => {
         if (!user) {
             navigate('/')
@@ -64,7 +66,7 @@ function MainPageHeader(props) {
                     <TodayButton className='todaybutton homebutton'>
                         <a href="">Today</a>
                     </TodayButton>
-                    <CreateButton className='createbutton homebutton dropdown'>
+                    <div className='createbutton homebutton dropdown'>
                         <button href='' onClick={handleCreate} className='dropbtn'>Create
                             <KeyboardArrowDownIcon />
                             {
@@ -80,7 +82,7 @@ function MainPageHeader(props) {
                                 ) : null
                             }
                         </button>
-                    </CreateButton>
+                    </div>
                 </div>
                 <SearchWrapper className='searchbar searchbarwrapper'>
                     <SearchBarWrapper className='searchlogo'>
