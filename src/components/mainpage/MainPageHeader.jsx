@@ -26,7 +26,7 @@ function MainPageHeader(props) {
 
     const { user } = useSelector((state) => state.auth)
 
-    const [inputs, setInput] = useState("");
+    const [input, setInput] = useState("");
     const [create, setCreate] = useState(false)
     const [avatar, setAvatar] = useState(false)
 
@@ -37,12 +37,12 @@ function MainPageHeader(props) {
     const handleAvatar = () => {
         setAvatar(!avatar);
     }
-    console.log(inputs);
+    console.log(input);
     const onSearchSubmit = (e) => {
         e.preventDefault();
-        console.log("this is the input", inputs)
-        props.onSubmit(inputs)
-
+        console.log(input)
+        props.onSubmit(input)
+        console.log("this is the input", input)
     }
 
     useEffect(() => {

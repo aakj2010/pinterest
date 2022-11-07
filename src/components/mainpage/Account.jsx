@@ -21,8 +21,8 @@ function Account() {
           <div className="avatar"><InitialsAvatar name={user.name} /></div>
         </div>
         <h2>{user.name}</h2>
-        <span className="username">@{user.name}</span>
-        <span className='username'>0 following</span>
+        <span className="user">@{user.name}</span>
+        <span className='user'>0 following</span>
       </div>
     </>
   )
