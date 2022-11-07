@@ -9,7 +9,7 @@ import { IconButton } from '@mui/material';
 import Avatar from './Avatar';
 import InitialsAvatar from 'react-initials-avatar';
 // import { Link } from 'react-router-dom'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import styled from 'styled-components'
 import Account from './Account';
@@ -42,7 +42,7 @@ function MainPageHeader(props) {
         e.preventDefault();
         console.log("this is the input", inputs)
         props.onSubmit(inputs)
-       
+
     }
 
     useEffect(() => {
@@ -56,15 +56,15 @@ function MainPageHeader(props) {
             <Wrapper className='header'>
                 <LogoWrapper className='logo'>
                     <IconButton>
-                        <PinterestIcon />
+                        <Link to='/'><PinterestIcon /></Link>
                     </IconButton>
                 </LogoWrapper>
                 <div className='homebutton'>
                     <HomePageButton className='homepagebutton homebutton'>
-                        <a href="">Home</a>
+                        <Link to='/' href="">Home</Link>
                     </HomePageButton>
                     <TodayButton className='todaybutton homebutton'>
-                        <a href="">Today</a>
+                        <Link to='/' href="">Today</Link>
                     </TodayButton>
                     <div className='createbutton homebutton dropdown'>
                         <button href='' onClick={handleCreate} className='dropbtn'>Create
@@ -105,8 +105,11 @@ function MainPageHeader(props) {
                         <span className='smshide'>Messages</span>
                     </IconButton>
                     <IconButton>
-                        <button to='/account' className='avatarlink'><InitialsAvatar name={user ? user.name : ""} /></button>
-                        <span className='avatarhide'>Your profile</span>
+                        <Link to='/account'>
+                            <button className='avatarlink'><InitialsAvatar name={user ? user.name : ""} /></button>
+                            <span className='avatarhide'>Your profile</span>
+                        </Link>
+
                     </IconButton>
                     <IconButton>
                         <button onClick={handleAvatar} className='accountlink' style={{ background: "none", border: "none", color: "#767676" }}>

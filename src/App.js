@@ -11,6 +11,7 @@ import Portal from './components/portal/Portal';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import { useSelector } from 'react-redux'
+import Account from './components/mainpage/Account';
 
 
 function App() {
@@ -91,7 +92,7 @@ function App() {
 
         <Route path='/mainpageheader' element={<MainPageHeader onSubmit={onSearchSubmit} />} />
         <Route path='/' element={<MainBoard pins={pins} />} />
-
+        <Route path= '/account' element={<Account />} />
 
         {/* <Route path='/portal' element={<Portal />}>
           <Route path='mainpageheader' element={<MainPageHeader onSubmit={onSearchSubmit} />} />

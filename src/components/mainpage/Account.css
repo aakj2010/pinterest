@@ -1,0 +1,24 @@
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 3rem;
+  padding: 1rem;
+}
+.avatar__wrapper {
+  font-size: 3rem;
+  /* font-weight: ; */
+  /* padding-bottom: 3rem; */
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-color: #e9e9e9;
+}
+.username{
+    color: #767676;
+}
