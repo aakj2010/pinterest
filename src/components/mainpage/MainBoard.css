@@ -52,9 +52,9 @@
         column-count: 5;
     }
 }
-/* @media (min-width:1512px) and (max-width:1763px){
+@media (min-width:1512px) and (max-width:1763px){
     .mainboard_container{
         max-width: 1512px;
         column-count: 6;
     }
-} */
+}
