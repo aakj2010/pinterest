@@ -25,10 +25,12 @@ function Login() {
 
     useEffect(() => {
         if (isError) {
+            alert("username or Password is Wrong")
             toast.error(message)
         }
 
         if (isSuccess || user) {
+            alert("logged in Successfully")
             navigate('/')
         }
 

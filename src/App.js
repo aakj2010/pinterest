@@ -20,7 +20,6 @@ function App() {
       {
         !user ? <HomePageHeader /> : null
       }
-
       <Routes>
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />

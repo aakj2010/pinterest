@@ -50,14 +50,6 @@ function MainBoard() {
         })
     }
 
-
-    // useEffect(() => {
-
-       
-    // }, [])
-
-
-
     const onSearchSubmit = (term) => {
         console.log("on Searchsubmit", term);
         getImages(term).then((res) => {
