@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import './Login.css'
 import { useSelector, useDispatch } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import PinterestIcon from '@mui/icons-material/Pinterest';
 import { register, reset } from '../features/auth/authSlice'
@@ -124,6 +124,9 @@ function Register() {
                     <div className="form-group">
                         <button type='submit' className='btn btn-red'>Login</button>
                     </div>
+                    <Link to="/login">
+                        <small> If you have an Account?</small>
+                    </Link>
                     {/* <span>Or</span>
                     <div>
                         <button type='submit' className="btn btn-block">Continue with Google</button>

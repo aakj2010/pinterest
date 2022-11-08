@@ -31,7 +31,7 @@ form{
   flex-direction: column;
 }
 section{
-  margin-top: 1rem !important; 
+  margin-top: 3rem !important; 
   width: 30% !important;
   border-radius: 5%;
   box-shadow: 0.3px 0.3px 15px #e8e8e8, -0.3px -0.3px 15px #ffffff;
