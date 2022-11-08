@@ -25,10 +25,10 @@ function HomePageHeader() {
                             Press
                         </li>
                         <li>
-                            <a href="" className='login'><Link to='/login' id='login'>Log in</Link></a>   
+                            <Link to='/login' className='login'>Log in</Link>
                         </li>
-                        <li id='signup'>
-                            <Link to='/register' id='signup'>Sign up</Link>
+                        <li>
+                            <Link to='/register' className='signup'>Sign up</Link>
                         </li>
                     </ul>
                 </div>

@@ -6,8 +6,9 @@
   align-items: center;
   height: 3.5rem;
   padding: 12px 4px 4px 16px;
-  background-color: white;
+  background-color: #fff;
   color: black;
+  /* overflow: hidden; */
 }
 .logo .MuiSvgIcon-root  {
   color: #e60023;

@@ -45,36 +45,40 @@ ul {
     display: inline;
   }
   li:hover{
-    text-decoration: underline;
+    /* text-decoration: underline; */
   }
-  #login > button{
-    margin: 8px 12px;
+  .login{
+    margin: 2px 12px;
     padding: 10px 8px;
     border-radius: 24px;
     border: none;
     font-size: 1rem;
     font-weight: 600;
-    background-color: #e60023 !important;
-    color: #fff !important;
+    background-color: #e60023;
+    color: #fff;
     text-decoration: none;
+    /* text-decoration-color: #fff !important; */
   }
-  #login > button:hover{
-    background-color: #ad081b !important;
-  }
-  #signup > button{
-    margin: 8px 0;
+  /* .login:hover{
+    background-color: #ad081b;
+    text-decoration: none;
+  } */
+  .signup{
+    margin: 2px 0;
     padding: 10px 8px;
     border-radius: 24px;
     border: none;
     font-size: 1rem;
     font-weight: 600;
-    background-color: #efefef !important;
-    color: black !important;
+    background-color: #efefef;
+    color: #000;
     text-decoration: none;
+    /* text-decoration-color: #000 !important; */
   }
-  #signup > button:hover{
-    background-color: #767676 !important;
-  }
+  /* .signup:hover{
+    background-color: #767676;
+    text-decoration: none;
+  } */
   .body{
     margin: 0;
     width: 100%;

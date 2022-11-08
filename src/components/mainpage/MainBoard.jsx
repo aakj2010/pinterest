@@ -78,7 +78,7 @@ function MainBoard() {
 
     return (
         <>
-            <MainPageHeader onSubmit={onSearchSubmit} />
+            <MainPageHeader onSubmit={onSearchSubmit} className='header' />
             <Wrapper>
                 <Container className='mainboard_container'>
                     {
@@ -104,10 +104,12 @@ const Wrapper = styled.div`
   height: 100%;
   margin-top: 1rem;
   justify-content: center;
+ 
 `
 
 const Container = styled.div`
   margin: 0 auto;
   height: 100%;
-  background-color: white; 
+  background-color: white;
+
 `
