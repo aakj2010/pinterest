@@ -22,7 +22,7 @@ function Avatar() {
             <div className='menu_1'>
                 <div className='' style={{ textAlign: "left", padding: "4px" }}>Currently in <br />
                     <div className='account' style={{ textAlign: "left", padding: "4px", display: "flex" }}>
-
+                            
                         <br /><br />
                         <div className="initial-avatar" style={{ padding: "2px", color: "#000000" }} >
                             <span className='initial'><InitialsAvatar name={user.name} /></span>

@@ -1,31 +1,92 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './MainBoard.css'
 import MainPageHeader from './MainPageHeader';
 import Pin from './Pin';
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-// import Masonry from "react-masonry-css";
 import styled from 'styled-components'
+import unsplash from '../../features/unsplash/unsplash'
 
 
-function MainBoard(props) {
-
-    let { pins } = props;
-    console.log(pins)
+function MainBoard() {
 
     const navigate = useNavigate()
 
     const { user } = useSelector((state) => state.auth)
 
+    const [pins, setNewPins] = useState([])
+
+
+    const getImages = (term) => {
+        return unsplash.get("https://api.unsplash.com/search/photos", {
+            params: {
+                query: term
+            }
+        });
+    };
+
+
+    const getNewPins = () => {
+        let promises = [];
+        let pinData = [];
+
+        let pins = ['ocean', 'Toys', 'bali']
+
+        pins.forEach((pinTerm) => {
+            promises.push(
+                getImages(pinTerm).then((res) => {
+                    let results = res.data.results;
+
+                    pinData = pinData.concat(results);
+
+                    pinData.sort(function (a, b) {
+                        return 0.5 - Math.random();
+                    });
+                })
+            )
+        })
+        Promise.all(promises).then(() => {
+            setNewPins(pinData)
+        })
+    }
+
+
+    // useEffect(() => {
+
+       
+    // }, [])
+
+
+
+    const onSearchSubmit = (term) => {
+        console.log("on Searchsubmit", term);
+        getImages(term).then((res) => {
+            let results = res.data.results;
+
+            let newPins = [
+                ...results,
+                ...pins,
+            ]
+
+            newPins.sort(function (a, b) {
+                return 0.5 - Math.random()
+            });
+            setNewPins(newPins);
+        })
+    }
+
+
+
     useEffect(() => {
         if (!user) {
             navigate('/login')
         }
+        getNewPins()
     }, [user, navigate])
 
     return (
         <>
-            <MainPageHeader />
+            <MainPageHeader onSubmit={onSearchSubmit} />
             <Wrapper>
                 <Container className='mainboard_container'>
                     {
@@ -37,20 +98,6 @@ function MainBoard(props) {
                 </Container>
             </Wrapper>
         </>
-
-        // <>
-        //     <MainPageHeader />
-        //     <div className='container'>
-        //         <div className='item'>
-        //             {
-        //                 pins.map((pin, index) => {
-        //                     let { urls } = pin;
-        //                     return <Pin key={index} urls={urls} />
-        //                 })
-        //             }
-        //         </div>
-        //     </div>
-        // </>
     )
 }
 

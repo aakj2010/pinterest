@@ -124,10 +124,10 @@ function Register() {
                     <div className="form-group">
                         <button type='submit' className='btn btn-red'>Login</button>
                     </div>
-                    <span>Or</span>
+                    {/* <span>Or</span>
                     <div>
                         <button type='submit' className="btn btn-block">Continue with Google</button>
-                    </div>
+                    </div> */}
                 </form>
             </section>
 

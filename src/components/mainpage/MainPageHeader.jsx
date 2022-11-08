@@ -8,19 +8,14 @@ import SmsIcon from '@mui/icons-material/Sms';
 import { IconButton } from '@mui/material';
 import Avatar from './Avatar';
 import InitialsAvatar from 'react-initials-avatar';
-// import { Link } from 'react-router-dom'
 import { useNavigate, Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import styled from 'styled-components'
-import Account from './Account';
-import MainBoard from './MainBoard';
+import PropTypes from 'prop-types'
 
-function MainPageHeader(props) {
 
-    // props: {
-    //     onsubmit: onSearchSubmit()
-    // }
-
+function MainPageHeader({ onSubmit }) {
+    // console.log(onSubmit)
 
     const navigate = useNavigate()
 
@@ -34,16 +29,19 @@ function MainPageHeader(props) {
     const handleCreate = () => {
         setCreate(!create);
     }
+
     const handleAvatar = () => {
         setAvatar(!avatar);
     }
-    console.log(input);
+
+    // console.log(input);
     const onSearchSubmit = (e) => {
         e.preventDefault();
-        console.log(input)
-        props.onSubmit(input)
+        // console.log(input)
+        onSubmit(input)
         console.log("this is the input", input)
     }
+
 
     useEffect(() => {
         if (!user) {
@@ -127,7 +125,15 @@ function MainPageHeader(props) {
     )
 }
 
+
+MainPageHeader.propTypes = {
+
+    onSubmit: PropTypes.func,
+}
+
 export default MainPageHeader
+
+
 
 
 
