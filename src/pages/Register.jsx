@@ -122,10 +122,10 @@ function Register() {
                         />
                     </div>
                     <div className="form-group">
-                        <button type='submit' className='btn btn-red'>Login</button>
+                        <button type='submit' className='btn btn-red'>Continue</button>
                     </div>
                     <Link to="/login">
-                        <small> If you have an Account?</small>
+                        <small className='small'>Already a member? Log in</small>
                     </Link>
                     {/* <span>Or</span>
                     <div>

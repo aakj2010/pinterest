@@ -65,9 +65,7 @@ function Login() {
         <>
             <section className='form'>
                 <div className='pinterest'>
-                    <IconButton>
-                        <PinterestIcon />
-                    </IconButton>
+                    <PinterestIcon />
                 </div>
                 <h2 className='heading'>Welcome to Pinterest</h2>
                 <form onSubmit={onSubmit}>
@@ -94,10 +92,10 @@ function Login() {
                             onChange={onChange} />
                     </div>
                     <div className="form-group">
-                        <button type='submit' className='btn btn-red'>Login</button>
+                        <button type='submit' className='btn btn-red'>Log in</button>
                     </div>
                     <Link to="/register">
-                        <small> Create an Account?</small>
+                        <small className='small'>Not on Pinterest yet? Sign up</small>
                     </Link>
                     {/* <span>Or</span>
                     <div>
