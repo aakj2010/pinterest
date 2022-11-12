@@ -69,9 +69,7 @@ function Register() {
         <>
             <section className='form'>
                 <div className='pinterest'>
-                    <IconButton>
-                        <PinterestIcon />
-                    </IconButton>
+                    <PinterestIcon />
                 </div>
                 <h2 className='heading'>Welcome to Pinterest</h2>
                 <form onSubmit={onSubmit}>
@@ -125,7 +123,7 @@ function Register() {
                         <button type='submit' className='btn btn-red'>Continue</button>
                     </div>
                     <Link to="/login">
-                        <small className='small'>Already a member? Log in</small>
+                        <span className='small'>Already a member? Log in</span>
                     </Link>
                     {/* <span>Or</span>
                     <div>

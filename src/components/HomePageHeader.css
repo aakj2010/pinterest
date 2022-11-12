@@ -43,28 +43,46 @@ ul {
     padding-left: 8px;
     padding-right: 8px;
     display: inline;
+    text-decoration: none;
   }
+  li:hover{
+    
+  }
+  .list:hover{
+    text-decoration: underline;
+
+  }
+
   .login{
-    margin: 2px 12px;
+    margin: 2px 0px;
     padding: 10px 8px;
     border-radius: 24px;
     border: none;
-    font-size: 1rem;
-    font-weight: 600;
-    background-color: #e60023;
+    font-size: 15px;
+    font-weight: 550;
+    /* background-color: #e60023; */
+    background-color: rgb(230, 0, 35);
     color: #fff;
     text-decoration: none;
+  }
+  .login:hover{
+    color: #fff;
+    background-color: #ad081b;
   }
   .signup{
     margin: 2px 0;
     padding: 10px 8px;
     border-radius: 24px;
     border: none;
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 15px;
+    font-weight: 550;
     background-color: #efefef;
     color: #000;
     text-decoration: none;
+  }
+  .signup:hover{
+    color: #000;
+    background-color: #e9e9e9;
   }
  
   .body{
@@ -74,12 +92,12 @@ ul {
     font-family: 'Poppins', sans-serif;
     text-align: center;
   }
-  h1{
+  /* h1{
     font-size: 3.5rem;
     font-weight: 400;
     font-family: 'Poppins';
-  }
-  a{
+  } */
+  /* a{
     margin: 4px;
     padding: 5px 4px;
     border-radius: 24px;
@@ -87,4 +105,4 @@ ul {
     font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
-  }
+  } */

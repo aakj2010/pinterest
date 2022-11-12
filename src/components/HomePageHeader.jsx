@@ -14,17 +14,17 @@ function HomePageHeader() {
                     <span className='logopinterest'>Pinterest</span>
                 </div>
                 <div className=''>
-                    <ul>
-                        <li>
+                    <ul >
+                        <li className='list'>
                             About
                         </li>
-                        <li>
+                        <li className='list'>
                             Business
                         </li>
-                        <li>
+                        <li className='list'>
                             Press
                         </li>
-                        <li>
+                        <li >
                             <Link to='/login' className='login'>Log in</Link>
                         </li>
                         <li>

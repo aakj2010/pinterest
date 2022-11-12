@@ -67,7 +67,7 @@ function Login() {
                 <div className='pinterest'>
                     <PinterestIcon />
                 </div>
-                <h2 className='heading'>Welcome to Pinterest</h2>
+                <p className='heading'>Welcome to Pinterest</p>
                 <form onSubmit={onSubmit}>
                     <div className="form-group">
                         <label>Email address</label>
@@ -95,7 +95,7 @@ function Login() {
                         <button type='submit' className='btn btn-red'>Log in</button>
                     </div>
                     <Link to="/register">
-                        <small className='small'>Not on Pinterest yet? Sign up</small>
+                        <span className='small'>Not on Pinterest yet? Sign up</span>
                     </Link>
                     {/* <span>Or</span>
                     <div>
