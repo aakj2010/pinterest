@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-// import './MainPageHeader.css'
+import './MainPageHeader.css'
 import PinterestIcon from '@mui/icons-material/Pinterest';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import SearchIcon from '@mui/icons-material/Search';
@@ -141,7 +141,9 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     height: 4rem;
-    padding: 12px 4px 4px 16px;
+    width:100vw;
+    aligncontent: center;
+    padding: 4px 12px 4px 12px;
     background-color: white;
     color: black;
 `
@@ -204,27 +206,32 @@ const CreateButton = styled(HomeButtons)`
 
 const SearchWrapper = styled.div`
     flex: 1;
+    align-items: center;
 `
 
 const SearchBarWrapper = styled.div`
     background-color: #efefef;
     display: flex;
-    height: 48px;
+    height: 46px;
     width: 100%;
+    align-items:center;
     border-radius: 50px;
     border: none;
-    padding-left: 10px;
+    padding-left: 4px;
 
     form {
         display: flex;
+        align-items:center;
         flex: 1;
     }
     form > input {
+        padding-top:8px;
+        align-items:center;
         background-color: transparent;
         border: none;
         width: 98%;
-        height: 45px;
-        margin-left: 5px;
+        height: 44px;
+        margin-left: 4px;
         font-size: 16px;
     }
     form > button {
@@ -237,4 +244,17 @@ const SearchBarWrapper = styled.div`
 
 const IconsWrapper = styled.div`
     padding-left: 12px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+    button{
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 4px;
+        height: 40px;
+        width: 40px;
+        margin: 3px;
+    }
 `

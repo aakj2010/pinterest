@@ -63,7 +63,7 @@ function Avatar() {
                         <a href="#">See term and privacy </a>
                     </li>
                     <li className='' >
-                        <button className='logout'
+                        <button className='button-9'
                             onClick={onLogout}
                             style={{width:"14rem"}}>Log out</button>
                     </li>
