@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import './MainPageHeader.css'
+// import './MainPageHeader.css'
 import PinterestIcon from '@mui/icons-material/Pinterest';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import SearchIcon from '@mui/icons-material/Search';
@@ -51,7 +51,7 @@ function MainPageHeader({ onSubmit }) {
 
     return (
         <>
-            <Wrapper className='header'>
+            <Wrapper >
                 <LogoWrapper className='logo'>
                     <IconButton>
                         <Link to='/'><PinterestIcon /></Link>
@@ -140,7 +140,7 @@ export default MainPageHeader
 const Wrapper = styled.div`
     display: flex;
     align-items: center;
-    height: 3.5rem;
+    height: 4rem;
     padding: 12px 4px 4px 16px;
     background-color: white;
     color: black;

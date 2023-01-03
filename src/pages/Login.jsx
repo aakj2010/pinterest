@@ -30,7 +30,7 @@ function Login() {
         }
 
         if (isSuccess || user) {
-            alert("logged in Successfully")
+            // alert("logged in Successfully")
             navigate('/')
         }
 
