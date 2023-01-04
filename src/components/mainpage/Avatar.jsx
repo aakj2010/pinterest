@@ -36,31 +36,31 @@ function Avatar() {
                 </div>
                 <div style={{ textAlign: "left", padding: "4px" }}>Your Accounts
                     <li className='menu_item_1'>
-                        <a href='#' style={{ color: "#000000", fontweight: "bold" }}>Add Account</a>
+                        <a href="#" rel="noopener noreferrer" style={{ color: "#000000", fontweight: "bold" }}>Add Account</a>
                     </li>
                     <li className='menu_item_1' style={{ color: "#000000", fontweight: "bold" }}>
-                        <a href="#">Convert to business</a>
+                        <a href="#" rel="noopener noreferrer">Convert to business</a>
                     </li>
                 </div>
 
                 <div style={{ textAlign: "left", padding: "4px" }}>More Options
                     <li className='menu_item_1' style={{ color: "#000000", fontweight: "bold" }}>
-                        <a href='#' >Settings</a>
+                        <a href="#" rel="noopener noreferrer" >Settings</a>
                     </li>
                     <li className='menu_item_1' style={{ color: "#000000", fontweight: "bold" }}>
-                        <a href="#">Tune your home feed</a>
+                        <a href="#" rel="noopener noreferrer">Tune your home feed</a>
                     </li>
                     <li className='menu_item_1' style={{ color: "#000000", fontweight: "bold" }}>
-                        <a href="#">Install the windows app</a>
+                        <a href="#" rel="noopener noreferrer">Install the windows app</a>
                     </li>
                     <li className='menu_item_1' style={{ color: "#000000", fontweight: "bold" }}>
-                        <a href="#">Your privacy rights </a>
+                        <a href="#" rel="noopener noreferrer">Your privacy rights </a>
                     </li>
                     <li className='menu_item_1' style={{ color: "#000000", fontweight: "bold" }}>
-                        <a href="#">Get help  </a>
+                        <a href="#" rel="noopener noreferrer">Get help  </a>
                     </li>
                     <li className='menu_item_1' style={{ color: "#000000", fontweight: "bold" }}>
-                        <a href="#">See term and privacy </a>
+                        <a href="#" rel="noopener noreferrer">See term and privacy </a>
                     </li>
                     <li className='' >
                         <button className='button-9'
