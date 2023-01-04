@@ -36,7 +36,7 @@ function Avatar() {
                 </div>
                 <div style={{ textAlign: "left", padding: "4px" }}>Your Accounts
                     <li className='menu_item_1'>
-                        <a href='' style={{ color: "#000000", fontweight: "bold" }}>Add Account</a>
+                        <a href='#' style={{ color: "#000000", fontweight: "bold" }}>Add Account</a>
                     </li>
                     <li className='menu_item_1' style={{ color: "#000000", fontweight: "bold" }}>
                         <a href="#">Convert to business</a>
@@ -45,7 +45,7 @@ function Avatar() {
 
                 <div style={{ textAlign: "left", padding: "4px" }}>More Options
                     <li className='menu_item_1' style={{ color: "#000000", fontweight: "bold" }}>
-                        <a href='' >Settings</a>
+                        <a href='#' >Settings</a>
                     </li>
                     <li className='menu_item_1' style={{ color: "#000000", fontweight: "bold" }}>
                         <a href="#">Tune your home feed</a>
@@ -65,7 +65,7 @@ function Avatar() {
                     <li className='' >
                         <button className='button-9'
                             onClick={onLogout}
-                            style={{width:"14rem"}}>Log out</button>
+                            style={{width:"14rem"}}>Logout</button>
                     </li>
                 </div>
             </div>
