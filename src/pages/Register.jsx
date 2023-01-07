@@ -123,12 +123,8 @@ function Register() {
                         <button type='submit' className='btn btn-red'>Continue</button>
                     </div>
                     <Link to="/login">
-                        <span className='small'>Already a member? Log in</span>
+                        <span className='small'>Already a member? Login</span>
                     </Link>
-                    {/* <span>Or</span>
-                    <div>
-                        <button type='submit' className="btn btn-block">Continue with Google</button>
-                    </div> */}
                 </form>
             </section>
 
