@@ -12,7 +12,6 @@ function Portal() {
                     <div id='content'>
                       
 
-
                     </div>
                     <Outlet />
                 </div>
