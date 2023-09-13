@@ -121,7 +121,7 @@ function Register() {
                     <div className="form-group">
                         <button type='submit' className='btn btn-red'>Continue</button>
                     </div>
-                    <Link to="/login">
+                    <Link>
                         <span className='small'>Already a member? Login</span>
                     </Link>
                 </form>
