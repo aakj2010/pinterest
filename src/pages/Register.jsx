@@ -6,7 +6,6 @@ import { toast } from 'react-toastify'
 import PinterestIcon from '@mui/icons-material/Pinterest';
 import { register, reset } from '../features/auth/authSlice'
 import Spinner from '../components/Spinner'
-import { IconButton } from '@mui/material';
 
 
 function Register() {
@@ -31,7 +30,7 @@ function Register() {
         }
 
         if (isSuccess || user) {
-            navigate('/')
+            navigate('/home')
         }
 
         dispatch(reset())
@@ -67,7 +66,7 @@ function Register() {
 
     return (
         <>
-            <section className='form'>
+            <div className='form login-form-section'>
                 <div className='pinterest'>
                     <PinterestIcon />
                 </div>
@@ -126,7 +125,7 @@ function Register() {
                         <span className='small'>Already a member? Login</span>
                     </Link>
                 </form>
-            </section>
+            </div>
 
         </>
     )

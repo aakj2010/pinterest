@@ -71,7 +71,7 @@ function MainBoard() {
 
     useEffect(() => {
         if (!user) {
-            navigate('/login')
+            navigate('/')
         }
         getNewPins()
     }, [user, navigate])

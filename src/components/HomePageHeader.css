@@ -1,13 +1,289 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 * {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Inter", sans-serif;
+}
+
+/* CSS */
+.img-wrapper {
+  position: relative;
+}
+
+.img-container-card {
+  opacity: 0;
+  transform: translateY(60px);
+}
+
+.img-container-card:nth-child(1) {
+  animation: slide-up-odd 0.5s forwards;
+}
+
+.img-container-card:nth-child(2) {
+  animation: slide-up-even 1s forwards;
+}
+.img-container-card:nth-child(3) {
+  animation: slide-up-even 1.5s forwards;
+}
+.img-container-card:nth-child(4) {
+  animation: slide-up-even 2s forwards;
+}
+.img-container-card:nth-child(5) {
+  animation: slide-up-even 2.5s forwards;
+}
+.img-container-card:nth-child(6) {
+  animation: slide-up-even 3s forwards;
+}
+.img-container-card:nth-child(7) {
+  animation: slide-up-even 3.5s forwards;
+}
+
+@keyframes slide-up-odd {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up-even {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* App.css */
+
+.landing-page{
+  position: relative;
+}
+
+/* FullScreenScroll.css */
+.full-screen-scroll {
+  width: 100vw;
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  overflow-x: hidden;
+  position: relative;
+  scroll-behavior: smooth;
+}
+body {
+  position: relative;
+}
+.section {
+  height: 100vh;
+  scroll-snap-align: start;
+  position: relative;
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+.singlePage-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.singlePage-section:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+.green {
+  color: rgb(0, 107, 108) !important;
+}
+.pink {
+  background-color: rgb(255, 226, 235);
+}
+.blue {
+  background: rgb(218, 255, 246);
+}
+.yellow {
+  background: rgb(255, 253, 146);
+}
+.black {
+  color: #000;
+}
+.content-section {
+  width: 50%;
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.lp-title {
+  color: rgb(195, 25, 82);
+  font-size: 3.75rem;
+  font-weight: bold;
+  text-align: center;
+}
+.lp-para {
+  max-width: 400px;
+  font-size: 24px;
+  color: rgb(195, 25, 82);
+  text-align: center;
+  margin-top: 1rem;
+}
+.img-section {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-section img {
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.img-section-image {
+  height: 100% !important;
+  width: 100% !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+}
+.relative {
+  position: relative;
+}
+.abs-img {
+  position: absolute;
+  width: 255px;
+  height: 430px !important;
+  bottom: 15%;
+  left: 5%;
+}
+
+.title {
+  font-size: 3.75rem;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 6.25rem;
+  z-index: 99999;
+}
+.second-line {
+  color: rgb(0, 118, 211);
+}
+.dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dot {
+  display: flex;
+  align-items: center;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin: 0.5rem;
+  color: #000;
+  background-color: lightgray;
+  border-radius: 50%;
+}
+
+.img-wrapper {
+  height: 75vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  margin-top: -13rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #fff; */
+  background: linear-gradient(0deg, #fff 18%, rgba(255, 255, 255, 0) 45%);
+}
+.img-container {
+  display: flex;
+  column-gap: 0.75rem;
+  height: 67vh;
+}
+.img-container-card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.75rem;
+}
+.img-container-card:nth-child(2) {
+  margin-top: 8.75rem;
+}
+.img-container-card:nth-child(6) {
+  margin-top: 8.75rem;
+}
+.img-container-card:nth-child(3) {
+  margin-top: 14rem;
+}
+.img-container-card:nth-child(5) {
+  margin-top: 14rem;
+}
+.img-container-card:nth-child(4) {
+  margin-top: 25rem;
+}
+.card-img {
+  width: 15rem;
+  height: 22rem;
+  border-radius: 1rem;
+}
+.linear {
+  z-index: 999;
+  height: 9vh;
+  width: 100vw;
+  background: linear-gradient(0deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+}
+.yellow-banner {
+  height: 23vh;
+  width: 100vw;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+  column-gap: 0.25rem;
+}
+.icon-img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.down-btn {
+  margin-top: -5rem;
+}
+.floating-icon {
+  z-index: 9999;
+  bottom: 5rem;
+  margin: 0 auto;
+  background-color: #e60023;
+  color: #fff;
+  border-radius: 50%;
+  padding: 15px;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  animation-name: bouncing-icon;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: center bottom;
+}
+.floating-icon-img {
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+}
+
+@keyframes bouncing-icon {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 .header {
   display: flex;
   justify-content: space-between;
-  height: 3.5rem;
-  padding: 12px 4px 4px 16px;
+  height: 5rem;
+  padding: 16px;
   background-color: white;
   color: black;
 }
@@ -17,6 +293,13 @@
   cursor: pointer;
   padding: 4px 4px;
   border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  font-size: 3rem;
+  width: 2rem;
+  height: 2rem;
 }
 .logo:hover {
   background-color: white !important;
@@ -29,80 +312,120 @@
 .logopinterest:hover {
   background-color: white;
 }
+.list-items,
+.log-btns {
+  display: flex;
+  align-items: center;
+}
+.log-btns {
+  column-gap: 0.5rem;
+}
+.about-list {
+  display: flex;
+  padding-right: 1.5rem;
+}
 
 ul {
-    font-size: 1rem;
-    font-weight: 600;
-    list-style-type: none;
-    float: right;
-    margin: 0;
-    padding: 0;
-  }
-  
-  li {
-    padding-left: 8px;
-    padding-right: 8px;
-    display: inline;
-    text-decoration: none;
-  }
-  li:hover{
-    
-  }
-  .list:hover{
-    text-decoration: underline;
+  list-style-type: none;
+  float: right;
+  margin: 0;
+  padding: 0;
+}
 
+.list {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem;
+  display: inline;
+  text-decoration: none;
+}
+
+.list:hover {
+  text-decoration: underline;
+}
+
+.login {
+  margin: 2px 0px;
+  padding: 8px 12px;
+  border-radius: 24px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 550;
+  /* background-color: #e60023; */
+  background-color: rgb(230, 0, 35);
+  color: #fff;
+  text-decoration: none;
+}
+.login:hover {
+  color: #fff;
+  background-color: #ad081b;
+}
+.signup {
+  margin: 2px 0;
+  padding: 10px 8px;
+  border-radius: 24px;
+  border: none;
+  font-size: 15px;
+  font-weight: 550;
+  background-color: #efefef;
+  color: #000;
+  text-decoration: none;
+}
+.signup:hover {
+  color: #000;
+  background-color: #e9e9e9;
+}
+
+.body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+/* For WebKit-based browsers */
+/* Hide the scrollbar track (background) and make it transparent */
+/* Style the scrollbar thumb */
+::-webkit-scrollbar {
+  width: 8px; /* Adjust the scrollbar width as needed */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Set the background color with transparency */
+  border-radius: 5px; /* Round the corners of the scrollbar thumb */
+}
+
+/* For Firefox */
+/* Hide the scrollbar track (background) and make it transparent */
+/* Style the scrollbar thumb */
+.content {
+  scrollbar-width: thin; /* Adjust the scrollbar width as needed */
+}
+
+.content::-webkit-scrollbar-track {
+  background-color: transparent; /* Make the scrollbar track transparent */
+}
+
+.content::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Set the background color with transparency */
+  border-radius: 5px; /* Round the corners of the scrollbar thumb */
+}
+
+/* For Edge */
+/* Hide the scrollbar track (background) and make it transparent */
+/* Style the scrollbar thumb */
+@supports (-ms-ime-align: auto) {
+  .content {
+    scrollbar-width: thin; /* Adjust the scrollbar width as needed */
   }
 
-  .login{
-    margin: 2px 0px;
-    padding: 10px 8px;
-    border-radius: 24px;
-    border: none;
-    font-size: 15px;
-    font-weight: 550;
-    /* background-color: #e60023; */
-    background-color: rgb(230, 0, 35);
-    color: #fff;
-    text-decoration: none;
+  .content::-webkit-scrollbar-track {
+    background-color: transparent; /* Make the scrollbar track transparent */
   }
-  .login:hover{
-    color: #fff;
-    background-color: #ad081b;
+
+  .content::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Set the background color with transparency */
+    border-radius: 5px; /* Round the corners of the scrollbar thumb */
   }
-  .signup{
-    margin: 2px 0;
-    padding: 10px 8px;
-    border-radius: 24px;
-    border: none;
-    font-size: 15px;
-    font-weight: 550;
-    background-color: #efefef;
-    color: #000;
-    text-decoration: none;
-  }
-  .signup:hover{
-    color: #000;
-    background-color: #e9e9e9;
-  }
- 
-  .body{
-    margin: 0;
-    width: 100%;
-    height: 100vh;
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-  }
-  /* h1{
-    font-size: 3.5rem;
-    font-weight: 400;
-    font-family: 'Poppins';
-  } */
-  /* a{
-    margin: 4px;
-    padding: 5px 4px;
-    border-radius: 24px;
-    border: none;
-    font-size: 1rem;
-    font-weight: 600;
-    text-decoration: none;
-  } */
+}

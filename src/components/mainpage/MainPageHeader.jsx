@@ -140,10 +140,10 @@ export default MainPageHeader
 const Wrapper = styled.div`
     display: flex;
     align-items: center;
-    height: 4rem;
+    height: 5rem;
     width:100vw;
     aligncontent: center;
-    padding: 4px 12px 4px 12px;
+    padding: 16px;
     background-color: white;
     color: black;
 `
@@ -151,7 +151,7 @@ const Wrapper = styled.div`
 const LogoWrapper = styled.div`
     .MuiSvgIcon-root {
         color: #e60023;
-        font-size: 2rem;
+        font-size: 3rem;
         cursor: pointer;
     }
     padding: 4px 4px;

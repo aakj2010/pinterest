@@ -6,7 +6,6 @@ import { toast } from 'react-toastify'
 import { login, reset } from '../features/auth/authSlice'
 import Spinner from '../components/Spinner'
 import PinterestIcon from '@mui/icons-material/Pinterest';
-// import { IconButton } from '@mui/material';
 
 
 function Login() {
@@ -28,15 +27,10 @@ function Login() {
             alert("username or Password is Wrong")
             toast.error(message)
         }
-
         if (isSuccess || user) {
-            // alert("logged in Successfully")
-            navigate('/')
+            navigate('/home')
         }
-
         dispatch(reset())
-
-
     }, [user, isError, isSuccess, message, navigate, dispatch])
 
     const onChange = (e) => {
@@ -63,7 +57,7 @@ function Login() {
 
     return (
         <>
-            <section className='form'>
+            <div className='form login-form-section'>
                 <div className='pinterest'>
                     <PinterestIcon />
                 </div>
@@ -77,7 +71,7 @@ function Login() {
                             id='email'
                             name='email'
                             value={email}
-                            placeholder='Enter your email'
+                            placeholder='Email'
                             onChange={onChange} />
                     </div>
                     <div className="form-group">
@@ -88,21 +82,23 @@ function Login() {
                             id='password'
                             name='password'
                             value={password}
-                            placeholder='Enter your password'
+                            placeholder='Password'
                             onChange={onChange} />
                     </div>
                     <div className="form-group">
                         <button type='submit' className='btn btn-red'>Log in</button>
                     </div>
-                    <Link to="/register">
-                        <span className='small'>Not on Pinterest yet? Sign up</span>
+
+                    <div className='privacy-policy'>
+                        By continuing, you agree to Pinterest's <br /><b>Terms of Service</b> and acknowledge that you've read <br /> our <b>Privacy Policy. Notice at Collection</b>
+                    </div>
+
+                    <Link to="/">
+                        <span className='small'><b>Not on Pinterest yet? Sign up</b></span>
                     </Link>
-                    {/* <span>Or</span>
-                    <div>
-                        <button type='submit' className="btn btn-block">Continue with Google</button>
-                    </div> */}
                 </form>
-            </section>
+            </div>
+
 
         </>
     )

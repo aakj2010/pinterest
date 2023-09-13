@@ -15,13 +15,13 @@
     background-color: white;
 } */
 
-.header {
+/* .header {
   position: sticky;
   overflow: inherit;
   top: 0;
   padding: 0;
   z-index: 9999;
-}
+} */
 
 @media (min-width: 320px) and (max-width: 480px) {
   .mainboard_container {

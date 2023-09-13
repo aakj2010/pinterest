@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
 
 * {
   margin: 0;
@@ -7,9 +6,7 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  height: 100vh;
-  /* background-image: url("https://images.ctfassets.net/b4k16c7lw5ut/TdKLskzZYA5IJddHkSvQE/23850e128cb6c060851b2371ccfabef3/Clipchamp-Pinterest-partnership-step-3.jpg?w=1000&h=563&fl=progressive&q=50&fm=jpg"); */
+  height: 100%;
 }
 .pinterest .MuiSvgIcon-root {
   color: #e60023;
@@ -24,26 +21,45 @@ body {
   /* margin-bottom: .5rem; */
   padding: 0 16px;
 }
-
-section,
-form{
-  /* width: 50%; */
-
+.white {
+  color: #fff;
+  text-align: left;
+}
+.login-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-image: url(../../public/images/bg-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.login-title-section {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.login-form-section,
+form {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-section{
-  margin-top: 3rem !important; 
-  width: 30% !important;
-  border-radius: 5%;
-  box-shadow: 0.3px 0.3px 15px #e8e8e8, -0.3px -0.3px 15px #ffffff;
+.login-form-section {
+  margin: 5rem auto !important;
+  width: 400px;
+  height: 37rem;
+  border-radius: 1.5rem;
+  background-color: #fff;
+  /* box-shadow: 0.3px 0.3px 15px #e8e8e8, -0.3px -0.3px 15px #ffffff; */
+  padding: 1.25rem 0.625rem 1.5rem 0.625rem;
 }
-form{
-/* margin-top: .2rem !important; */
+/* form{
 margin-bottom: .5rem !important;
-}
+} */
 
 .form-group {
   margin-bottom: 10px;
@@ -51,17 +67,18 @@ margin-bottom: .5rem !important;
 
 .form-group input {
   font-size: 14px;
-  width: 15rem !important;
-  height: 2.5rem !important;
-  padding: 8px 16px !important;
+  width: 16.5rem;
+  height: 2.75rem;
+  padding: 8px 16px;
   border: 1px solid #e6e6e6;
-  border-radius: 1rem !important;
+  border-radius: 1rem;
   margin-bottom: 10px;
   font-family: inherit;
 }
 
 .form-group label {
   font-size: 14px;
+  font-weight: 400;
   color: #111111;
   text-align: left;
   display: block;
@@ -69,48 +86,49 @@ margin-bottom: .5rem !important;
 }
 
 .btn-red {
-  width: 15rem;
+  width: 16.5rem;
   height: 2.5rem;
   margin: 8px 0 0;
   padding: 0px 18px;
-  border: 1px solid #d50c22 !important;
-  border-radius: 2.5rem !important;
-  background: #e60023!important;
-  color: #fff !important;
+  border: 1px solid #d50c22;
+  border-radius: 1.25rem;
+  background: #e60023;
+  color: #fff;
   font-size: 15px;
-  font-weight: 550;
+  line-height: 2.5rem;
+  font-weight: 700;
   cursor: pointer;
   text-align: center;
 }
-.btn-red:hover{
-  background-color: #D50C22 !important;
+.btn-red:hover {
+  background-color: #d50c22;
+  color: #fff;
+}
+b {
+  color: #000;
 }
 
-.small{
+.small {
   font-size: 12px;
   color: #111111;
   text-decoration: none !important;
 }
-.small:hover{
+
+a {
+  text-decoration: none;
+}
+.small:hover {
   text-decoration: none;
 }
 
 .btn-block {
-  width: 15rem !important;
+  width: 15rem;
   height: 2.5rem;
-  border-radius: 2.5rem !important;
+  border-radius: 2.5rem;
   padding: 10px 20px;
-  color: #fff !important;
-  background: #000 !important;
+  color: #fff;
+  background: #000;
 }
-/* .btn-block:hover{
-  background: #fff !important;
-  color: #000 !important;
-} */
-
-/* .btn:hover {
-  transform: scale(0.98);
-} */
 
 .loadingSpinnerContainer {
   position: fixed;
@@ -142,6 +160,17 @@ margin-bottom: .5rem !important;
     transform: rotate(360deg);
   }
 }
+.heading h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.privacy-policy {
+  font-size: 11px;
+  color: rgb(118, 118, 118);
+  margin-top: 12px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
 
 @media (max-width: 600px) {
   .form {
@@ -154,5 +183,65 @@ margin-bottom: .5rem !important;
 
   .heading p {
     font-size: 1.5rem;
+  }
+}
+/* For WebKit-based browsers */
+/* Hide the scrollbar track (background) and make it transparent */
+/* Style the scrollbar thumb */
+::-webkit-scrollbar {
+  width: 10px; /* Adjust the scrollbar width as needed */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.3
+  ); /* Set the background color with transparency */
+  border-radius: 5px; /* Round the corners of the scrollbar thumb */
+}
+
+/* For Firefox */
+/* Hide the scrollbar track (background) and make it transparent */
+/* Style the scrollbar thumb */
+.content {
+  scrollbar-width: thin; /* Adjust the scrollbar width as needed */
+}
+
+.content::-webkit-scrollbar-track {
+  background-color: transparent; /* Make the scrollbar track transparent */
+}
+
+.content::-webkit-scrollbar-thumb {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.3
+  ); /* Set the background color with transparency */
+  border-radius: 5px; /* Round the corners of the scrollbar thumb */
+}
+
+/* For Edge */
+/* Hide the scrollbar track (background) and make it transparent */
+/* Style the scrollbar thumb */
+@supports (-ms-ime-align: auto) {
+  .content {
+    scrollbar-width: thin; /* Adjust the scrollbar width as needed */
+  }
+
+  .content::-webkit-scrollbar-track {
+    background-color: transparent; /* Make the scrollbar track transparent */
+  }
+
+  .content::-webkit-scrollbar-thumb {
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.3
+    ); /* Set the background color with transparency */
+    border-radius: 5px; /* Round the corners of the scrollbar thumb */
   }
 }
