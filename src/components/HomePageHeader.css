@@ -58,7 +58,7 @@
 
 /* FullScreenScroll.css */
 .full-screen-scroll {
-  width: 100vw;
+  width: 99vw;
   /* height: 100vh; */
   display: flex;
   flex-direction: column;
